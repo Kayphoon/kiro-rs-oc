@@ -77,9 +77,9 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: kiro-rs-${{ github.event.inputs.version || github.ref_name }}-${{ matrix.name }}
+          name: kiro-rs-oc-${{ github.event.inputs.version || github.ref_name }}-${{ matrix.name }}
           if-no-files-found: error
           compression-level: 6
           path: |
-            target/${{ matrix.target }}/release/kiro-rs
-            target/${{ matrix.target }}/release/kiro-rs.exe
+            target/${{ matrix.target }}/release/kiro-rs-oc
+            target/${{ matrix.target }}/release/kiro-rs-oc.exe
